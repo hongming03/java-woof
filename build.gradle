@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'application'
     id 'distribution'
+    id "org.sonarqube" version "7.2.1.6560" 
 }
 
 mainClassName = 'io.snyk.woof.server.WoofApplication'
@@ -110,4 +111,11 @@ repositories {
 
 wrapper {
     gradleVersion = "4.10.3"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "javaprojectreachability03"
+    property "sonar.organization", "javaprojectreachability03"
+  }
 }
